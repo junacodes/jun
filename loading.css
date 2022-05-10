@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    background-color: rgb(167, 161, 161);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#counter{
+    color: rgb(109, 8, 8);
+    font-size: 45px;
+    border: 1px solid black;
+}

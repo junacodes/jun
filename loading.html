@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" href="./loading.css">
+</head>
+
+<body>
+    <div style="width: 400px;">
+        <div id="counter">Loading</div>
+        <hr id="hr" style="width: 30%; margin-left:0;" />
+    </div>
+
+
+    <script>
+        let counts = setInterval(updated, 100);
+        let upto = 3;
+        let width = 3;
+        function updated() {
+            const count = document.getElementById("counter");
+            const hr = document.getElementById("hr");
+            ++upto;
+            count.innerHTML = "loading" + upto + "%";
+            hr.style.width = upto + "%";
+
+            if (upto === 100) {
+                clearInterval(counts);
+                count.innerHTML = "Done";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
